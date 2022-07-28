@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] Transform down;
     [SerializeField] GameObject prefabeStone;
     [SerializeField] float y1;
-    private bool start_spawning = true ;
 
     [Header("Родитель и ребёнок камень")]
     public GameObject stone;
@@ -18,32 +17,18 @@ public class GameManager : MonoBehaviour
     public static GameManager Instantate;
 
     public float posy;
-    void Start ()
+    void Start()
     {
-        Invoke("spawn", 2.0f);
+        InvokeRepeating("spawn", 3, 3);
 
-        Instantate = GetComponent<GameManager>();
+        Instantate = this;
 
         Parent_of_stone = GameObject.Find("Parent_of_stone");
     }
 
     void Update()
     {
-        if(Parent_of_stone.transform.childCount == 10)
-        {
-            start_spawning = false;
-            CancelInvoke();
-        }
-        else if (Parent_of_stone.transform.childCount == 5 && !IsInvoking("spawn"))
-        {
-            start_spawning = true;
-            Invoke("spawn", 2.0f);
-        }
-        else if (!IsInvoking("spawn") && start_spawning)
-        {
 
-            Invoke("spawn", 2.0f);
-        }
     }
 
     void spawn()
@@ -51,16 +36,15 @@ public class GameManager : MonoBehaviour
         GameObject stone;
 
         stone = Instantiate(prefabeStone);
+        
+        float x = Random.Range(left.position.x + left.localScale.x, right.position.x - right.localScale.x);
 
-        float x = Mathf.Floor(Random.Range(0.17f , 2.35f - 0.17f) / 0.17f) * 0.17f + 0.17f * 0.5f;
-
-        float y = Mathf.Floor(-Random.Range(0.17f, 1.70f - 0.17f) / 0.17f) * 0.17f - 0.17f * 0.5f; ;
+        float y = Random.Range(up.position.y + up.localScale.y, down.position.y - down.localScale.y);
 
         posy = y;
 
         stone.transform.position = new Vector3(x, y1);
 
         stone.transform.parent = Parent_of_stone.transform;
-
     }
 }

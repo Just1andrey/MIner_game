@@ -6,7 +6,7 @@ public class Stone : MonoBehaviour
     [Header("Можно изменять: ")]
 
     [SerializeField] float speed;
-    public int hp = 3;
+    [SerializeField] int hp;
 
     void Start()
     {
@@ -27,12 +27,13 @@ public class Stone : MonoBehaviour
 
      void OnMouseDown()
      {
-
         hp -= attack_of_stone.Instantate.damage;
-        if (hp <= 0)
+        if(hp <= 0)
         {
+            Properties.instance.AddMoney();
+            Properties.instance.AddExp();
             Destroy(gameObject);
+            
         }
-
      }
 }
