@@ -62,7 +62,6 @@
     <Compile Include="Assets\Scripts\UI_Manager.cs" />
     <Compile Include="Assets\Scripts\ISaveLoadData.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
-    <Compile Include="Assets\Scenes\Exit_Button.cs" />
     <Compile Include="Assets\Scripts\Properties.cs" />
   </ItemGroup>
   <ItemGroup>
