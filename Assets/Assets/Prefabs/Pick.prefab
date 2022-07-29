@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8116639521930243195}
   - component: {fileID: 7403021687253930098}
   - component: {fileID: 7650520403161189014}
-  - component: {fileID: 7294365524211202749}
   m_Layer: 0
   m_Name: Pick
   m_TagString: Untagged
@@ -97,20 +96,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
---- !u!114 &7294365524211202749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142638826560096791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cd538bd64ee23340ac0a853daff02a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  w: 0
-  h: 0
-  player: {fileID: 3443860386276065889, guid: eacca5dd906c5d444a8fad9699527e33, type: 3}
-  playableWidth: 0
-  playableHeight: 0
