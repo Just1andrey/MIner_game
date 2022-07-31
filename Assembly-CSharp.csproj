@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{32C3BDE6-E125-3128-82C1-25D0441455A3}</ProjectGuid>
+    <ProjectGuid>{DD8BB905-17D1-AAA6-C8A2-213488C298D6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,12 +55,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Stone.cs" />
     <Compile Include="Assets\Scripts\attack_of_stone.cs" />
+    <Compile Include="Assets\Scripts\Movement_Manager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Sound_Manager.cs" />
     <Compile Include="Assets\Scripts\UI_Manager.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
-    <Compile Include="Assets\Scripts\Movement_Manager.cs" />
     <Compile Include="Assets\Scenes\Exit_Button.cs" />
+    <Compile Include="Assets\Scripts\StartGame.cs" />
+    <Compile Include="Assets\Scripts\Data.cs" />
+    <Compile Include="Assets\Scripts\ExitGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
